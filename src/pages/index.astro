@@ -1,5 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+import { Image } from 'astro:assets';
+import conchaHero from '../assets/concha-hero.png';
+import handsPhoto from '../assets/hands.png';
 
 const menuItems = [
   { name: 'Vanilla Concha', price: '$4.50' },
@@ -40,12 +43,14 @@ const boxes = [
   <p class="overline">Mexican pastry for Boston offices</p>
 
   <div class="hero-image">
-    <!-- Replace with real photo: single pink concha, overhead, soft shadow on cream -->
-    <div class="hero-placeholder" role="img" aria-label="A pink concha, freshly baked">
-      <div class="concha-visual">
-        <div class="concha-shell"></div>
-      </div>
-    </div>
+    <Image
+      src={conchaHero}
+      alt="A pink concha, freshly baked"
+      width={560}
+      height={560}
+      loading="eager"
+      class="concha-img"
+    />
   </div>
 
   <h1>Baked at four. Delivered by nine.</h1>
@@ -72,10 +77,13 @@ const boxes = [
 <!-- STORY PHOTO -->
 <section class="story-photo" id="story">
   <div class="story-image">
-    <!-- Replace with real photo: hands pressing concha shell pattern into dough -->
-    <div class="story-placeholder" role="img" aria-label="Hands shaping concha dough">
-      <div class="hands-visual"></div>
-    </div>
+    <Image
+      src={handsPhoto}
+      alt="Hands pressing a shell pattern into concha dough"
+      width={720}
+      height={560}
+      class="hands-img"
+    />
   </div>
 </section>
 
@@ -195,35 +203,16 @@ const boxes = [
     width: 280px;
     height: 280px;
     margin-bottom: var(--space-xl);
-  }
-
-  /* Placeholder concha — replace .hero-placeholder with an <img> tag */
-  .hero-placeholder {
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .concha-visual {
-    width: 220px;
-    height: 200px;
-    background: radial-gradient(ellipse at center, #E8B4A0 0%, #D4956A 40%, #C2703E 100%);
-    border-radius: 50% 50% 48% 48%;
-    position: relative;
-    box-shadow: 0 20px 60px rgba(194, 112, 62, 0.15);
-  }
-
-  .concha-shell {
-    position: absolute;
-    inset: 12%;
-    border-radius: 50%;
-    background: repeating-conic-gradient(
-      from 0deg,
-      rgba(255, 255, 255, 0.12) 0deg 15deg,
-      transparent 15deg 30deg
-    );
+  .concha-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
   }
 
   .hero h1 {
@@ -311,28 +300,14 @@ const boxes = [
 
   .story-image {
     width: 360px;
-    height: 280px;
     border-radius: 8px;
     overflow: hidden;
   }
 
-  .story-placeholder {
+  .hands-img {
     width: 100%;
-    height: 100%;
-  }
-
-  .hands-visual {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(145deg, #D4A373, #A0765A);
-    position: relative;
-  }
-
-  .hands-visual::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 50% 60%, rgba(255,255,255,0.1), transparent 70%);
+    height: auto;
+    display: block;
   }
 
   /* ===== BOXES ===== */
@@ -452,11 +427,6 @@ const boxes = [
       height: 200px;
     }
 
-    .concha-visual {
-      width: 160px;
-      height: 145px;
-    }
-
     .hero h1 {
       font-size: 1.8rem;
     }
@@ -475,7 +445,6 @@ const boxes = [
 
     .story-image {
       width: 280px;
-      height: 220px;
     }
   }
 </style>

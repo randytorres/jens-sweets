@@ -1,0 +1,73 @@
+/* ============================================
+   Jen's Sweets — Global Styles
+   Minimal Japanese-meets-Mexican aesthetic
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap');
+
+:root {
+  /* Brand Colors */
+  --cream: #F5F2EC;
+  --warm-white: #FAF8F5;
+  --paper: #FFFDF9;
+  --ink: #1C1917;
+  --ink-light: #44403C;
+  --ink-muted: #78716C;
+  --ink-faint: #A8A29E;
+  --terracotta: #C2703E;
+  --terracotta-light: #D4956A;
+  --terracotta-faint: #E8CEBB;
+  --blush: #E8D5CC;
+  --rule: #DDD6CC;
+  --rule-light: #EBE6DF;
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'Outfit', 'Helvetica Neue', sans-serif;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+  --space-2xl: 128px;
+  --space-3xl: 256px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--terracotta-faint);
+  color: var(--ink);
+}

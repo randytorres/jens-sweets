@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import { Image } from 'astro:assets';
 import conchaHero from '../assets/concha-hero.png';
 import handsPhoto from '../assets/hands.png';
+import boxPhoto from '../assets/box-photo.png';
 
 const menuItems = [
   { name: 'Vanilla Concha', price: '$4.50' },
@@ -83,6 +84,19 @@ const boxes = [
       width={720}
       height={560}
       class="hands-img"
+    />
+  </div>
+</section>
+
+<!-- BOX PHOTO -->
+<section class="box-photo">
+  <div class="box-image">
+    <Image
+      src={boxPhoto}
+      alt="A kraft box of conchas with a card reading para ti"
+      width={720}
+      height={480}
+      class="box-img"
     />
   </div>
 </section>
@@ -310,6 +324,25 @@ const boxes = [
     display: block;
   }
 
+  /* ===== BOX PHOTO ===== */
+  .box-photo {
+    display: flex;
+    justify-content: center;
+    padding: 0 2.5rem var(--space-xl);
+  }
+
+  .box-image {
+    max-width: 480px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .box-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   /* ===== BOXES ===== */
   .boxes {
     max-width: 600px;
@@ -445,6 +478,10 @@ const boxes = [
 
     .story-image {
       width: 280px;
+    }
+
+    .box-image {
+      max-width: 100%;
     }
   }
 </style>

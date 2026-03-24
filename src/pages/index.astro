@@ -35,7 +35,7 @@ const boxes = [
   <div class="nav-links">
     <a href="#menu">Menu</a>
     <a href="#story">Story</a>
-    <a href="#order">Contact</a>
+    <a href="/order">Order</a>
   </div>
 </nav>
 
@@ -58,7 +58,7 @@ const boxes = [
 
   <div class="hero-cta">
     <div class="cta-line"></div>
-    <a href="#order">Place an order</a>
+    <a href="/order">Place an order</a>
   </div>
 </section>
 
@@ -106,7 +106,7 @@ const boxes = [
   <h2>Box</h2>
   <div class="box-grid">
     {boxes.map((box) => (
-      <a href="#order" class="box-card">
+      <a href="/order" class="box-card">
         <span class="box-name">{box.name}</span>
         <span class="box-meta">{box.pieces}, {box.price}</span>
       </a>
@@ -116,19 +116,22 @@ const boxes = [
 
 <!-- ORDER / CONTACT -->
 <section class="contact" id="order">
-  <p class="overline">Place an order</p>
+  <p class="overline">Ready?</p>
   <h2>Tell us when and where.</h2>
   <p class="contact-body">
     We deliver fresh pan dulce to offices in Boston, Monday through Friday.
     Orders close 48 hours before delivery. First box is on us.
   </p>
-  <a href="mailto:hello@jenssweets.com" class="contact-link">hello@jenssweets.com</a>
+  <div class="contact-actions">
+    <a href="/order" class="contact-btn">Place an order</a>
+    <a href="mailto:hello@jenssweets.com" class="contact-link">or email us</a>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="monogram monogram-sm"><span>JS</span></div>
-  <p>&copy; {new Date().getFullYear()} Jen's Sweets</p>
+  <p>&copy; {new Date().getFullYear()} Jen's Sweets &nbsp;&middot;&nbsp; <a href="/terms" class="footer-link">Terms</a></p>
 </footer>
 
 </Base>
@@ -413,17 +416,41 @@ const boxes = [
     margin-bottom: var(--space-lg);
   }
 
-  .contact-link {
+  .contact-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .contact-btn {
+    font-family: var(--font-body);
     font-size: 0.9rem;
     font-weight: 400;
-    color: var(--ink);
-    border-bottom: 1px solid var(--terracotta);
+    color: var(--cream);
+    background: var(--ink);
+    padding: 0.85rem 2rem;
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
+
+  .contact-btn:hover {
+    background: var(--terracotta);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(194, 112, 62, 0.15);
+  }
+
+  .contact-link {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--rule);
     padding-bottom: 2px;
-    transition: color 0.2s;
+    transition: color 0.2s, border-color 0.2s;
   }
 
   .contact-link:hover {
     color: var(--terracotta);
+    border-color: var(--terracotta);
   }
 
   /* ===== FOOTER ===== */
@@ -439,6 +466,17 @@ const boxes = [
   footer p {
     font-size: 0.7rem;
     color: var(--ink-faint);
+  }
+
+  .footer-link {
+    color: var(--ink-faint);
+    border-bottom: 1px solid var(--rule-light);
+    padding-bottom: 1px;
+    transition: color 0.2s;
+  }
+
+  .footer-link:hover {
+    color: var(--ink-muted);
   }
 
   /* ===== RESPONSIVE ===== */

@@ -1,0 +1,264 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Terms & Conditions — Jen's Sweets"
+  description="Terms and conditions for ordering from Jen's Sweets, a Mexican pan dulce bakery delivering to Boston offices."
+>
+
+<nav>
+  <a href="/" class="nav-logo" aria-label="Jen's Sweets home">
+    <div class="monogram"><span>JS</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="/#menu">Menu</a>
+    <a href="/order">Order</a>
+  </div>
+</nav>
+
+<main class="terms-page">
+  <p class="overline">Legal</p>
+  <h1>Terms & Conditions</h1>
+  <p class="updated">Last updated: March 2026</p>
+
+  <div class="terms-content">
+
+    <section>
+      <h2>1. Orders</h2>
+      <p>All orders require a minimum of 48 hours advance notice. Orders placed with less than 48 hours notice are subject to availability and may not be fulfilled.</p>
+      <p>Orders are confirmed via email. An order is not final until you receive a confirmation from us. We reserve the right to decline any order.</p>
+      <p>Minimum order is one box (The Morning Mix, 6 pieces). There is no maximum, but orders exceeding 10 boxes require 5 business days notice.</p>
+    </section>
+
+    <section>
+      <h2>2. Pricing & Payment</h2>
+      <p>All prices are listed in US dollars and are subject to change without notice. Prices do not include applicable sales or meals tax, which will be added to your total.</p>
+      <p>Payment is due at time of delivery unless a recurring billing arrangement has been made. We accept Venmo, Zelle, credit card (via Square), and cash.</p>
+      <p>For recurring weekly orders, invoices are sent on Fridays and are due within 15 days.</p>
+    </section>
+
+    <section>
+      <h2>3. Delivery</h2>
+      <p>We deliver Monday through Friday between 7:00 AM and 9:00 AM. Specific delivery time requests are accommodated when possible but not guaranteed.</p>
+      <p>Delivery is free within 10 miles of Boston. Orders outside this radius may be subject to a delivery fee, which will be communicated before confirmation.</p>
+      <p>You are responsible for providing accurate delivery information including building access instructions. We are not responsible for delays caused by incorrect addresses, locked buildings, or unavailable recipients.</p>
+      <p>If no one is available to receive the delivery, we will leave the order in the designated location per your instructions. Jen's Sweets is not responsible for orders left unattended after delivery.</p>
+    </section>
+
+    <section>
+      <h2>4. Cancellations & Changes</h2>
+      <p>Orders may be cancelled or modified at no charge with at least 24 hours notice before the scheduled delivery date.</p>
+      <p>Cancellations made with less than 24 hours notice are subject to a 50% cancellation fee, as ingredients will have already been purchased and preparation may have begun.</p>
+      <p>Same-day cancellations are non-refundable.</p>
+    </section>
+
+    <section>
+      <h2>5. Refunds</h2>
+      <p>If you are unsatisfied with your order due to a quality issue, contact us within 24 hours of delivery at hello@jenssweets.com. We will offer a replacement delivery or full refund at our discretion.</p>
+      <p>Refunds are not available for orders that were delivered as confirmed and on time.</p>
+    </section>
+
+    <section>
+      <h2>6. Allergens & Dietary</h2>
+      <p>Our products are made in a kitchen that handles wheat, eggs, dairy, nuts, and soy. While we take precautions, we cannot guarantee that any product is free from allergens.</p>
+      <p>If you have severe allergies, please disclose them when ordering. We will do our best to accommodate dietary needs, but we cannot guarantee a completely allergen-free environment.</p>
+      <p>It is the customer's responsibility to communicate all allergies and dietary restrictions at the time of ordering. Jen's Sweets is not liable for allergic reactions resulting from undisclosed allergies.</p>
+    </section>
+
+    <section>
+      <h2>7. Food Safety</h2>
+      <p>All products are baked fresh the morning of delivery and are intended for same-day consumption. We are not responsible for product quality or safety after the day of delivery.</p>
+      <p>Our kitchen follows all applicable Massachusetts food safety regulations. Food handler certifications and applicable permits are maintained and current.</p>
+    </section>
+
+    <section>
+      <h2>8. Sample Boxes</h2>
+      <p>Complimentary sample boxes are available for first-time corporate customers at our discretion. Sample box offers are limited to one per company and are subject to our delivery area.</p>
+      <p>Acceptance of a sample box does not obligate you to place future orders.</p>
+    </section>
+
+    <section>
+      <h2>9. Limitation of Liability</h2>
+      <p>Jen's Sweets is a small bakery business. Our total liability for any claim arising from an order shall not exceed the amount paid for that specific order.</p>
+      <p>We are not liable for indirect, incidental, or consequential damages arising from the use of our products or services.</p>
+    </section>
+
+    <section>
+      <h2>10. Changes to Terms</h2>
+      <p>We may update these terms from time to time. Changes take effect when posted to this page. Continued ordering after changes constitutes acceptance of the updated terms.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Questions about these terms? Reach us at <a href="mailto:hello@jenssweets.com">hello@jenssweets.com</a>.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="monogram monogram-sm"><span>JS</span></div>
+  <p>&copy; {new Date().getFullYear()} Jen's Sweets</p>
+</footer>
+
+</Base>
+
+<style>
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+    background: rgba(245, 242, 236, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .monogram {
+    width: 44px;
+    height: 44px;
+    border: 1.25px solid var(--ink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .monogram span {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+
+  .monogram-sm {
+    width: 36px;
+    height: 36px;
+    border-width: 1px;
+  }
+
+  .monogram-sm span {
+    font-size: 0.8rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--ink-light);
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--ink);
+  }
+
+  /* PAGE */
+  .terms-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 8rem 2rem 4rem;
+  }
+
+  .overline {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-weight: 400;
+    margin-bottom: var(--space-md);
+  }
+
+  .terms-page h1 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: var(--space-sm);
+  }
+
+  .updated {
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    margin-bottom: var(--space-xl);
+  }
+
+  /* CONTENT */
+  .terms-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .terms-content section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .terms-content h2 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--rule-light);
+  }
+
+  .terms-content p {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    line-height: 1.75;
+  }
+
+  .terms-content a {
+    color: var(--ink);
+    border-bottom: 1px solid var(--terracotta);
+    padding-bottom: 1px;
+    transition: color 0.2s;
+  }
+
+  .terms-content a:hover {
+    color: var(--terracotta);
+  }
+
+  /* FOOTER */
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: var(--space-xl) 2.5rem;
+    border-top: 1px solid var(--rule-light);
+  }
+
+  footer p {
+    font-size: 0.7rem;
+    color: var(--ink-faint);
+  }
+
+  @media (max-width: 640px) {
+    nav {
+      padding: 1rem 1.5rem;
+    }
+
+    .terms-page {
+      padding: 7rem 1.5rem 3rem;
+    }
+
+    .terms-page h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
